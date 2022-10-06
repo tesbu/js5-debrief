@@ -6,6 +6,26 @@
 
   </head>
   <body>
-	
+    <div>
+      <h1>List of selected names</h1>
+      <button onclick="randomNames()">Random Names</button>
+      <button onclick="clearNames()">Clear</button>
+     <p id="list"></p>
+      
+    </div>
+	<script>
+    let namesList=["Sum", "bilenda", "Selemon", "Hilina", "Tesfaye", "Amanda", "Venisa", "Aweke", "Alex", "Mickel"]
+    function randomNames(namesList){
+      let selectNames = [];
+      
+      for(let i = 0; i < 4; i++){
+        let randomName  = namesList[Math.floor(Math.random()*namesList.length)]
+        selectNames.push(randomName)
+        
+      }
+     //return selectNames
+     document.getElementById("list").innerHTML = `${selectNames[0]}`
+    }
+  </script>
   </body>
 </html>
